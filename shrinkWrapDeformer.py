@@ -1,9 +1,9 @@
-  
 import maya.cmds as cmds
 import maya.mel as mel
 import pymel.core as pm
-class BoundingBox():
-     
+
+class BoundingBox(): 
+    
     def __init__(self):
         pass
         
@@ -67,11 +67,9 @@ class BoundingBox():
         cmds.select(proxymesh[0]) 
         cmds.select(mesh[0], add = True)      
         self.copyPivot(mesh[0], proxymesh)
-        #return proxymesh[0]
+        return proxymesh[0]
 
     def MakeCube(self, *args):
         geo = cmds.geomToBBox(keepOriginal=True, name="bakedBOX", combineMesh = True)
         return geo
-        
-            
         
